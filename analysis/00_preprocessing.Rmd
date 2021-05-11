@@ -1,0 +1,17 @@
+---
+title: "Untitled"
+author: "Kiri Kuroda"
+date: "5/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+```{r}
+read_csv("../data/metric_mri_stimuli.csv") %>%
+  filter(pattern <= 9) %>%
+  write_csv("../data/metric_online_stimuli.csv")
+```
+

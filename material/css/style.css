@@ -1,0 +1,164 @@
+/*
+@file Stylesheet for the Copy-When-Uncertain experiment
+@author Kiri Kuroda <kuroda.kiri@gmail.com>
+*/
+
+@charset "UTF-8";
+
+/********************/
+/* General settings */
+/********************/
+
+* {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  text-align: left;
+  font-size: 2.0vw;
+  line-height: 1.5;
+}
+
+.fixation {
+  font-size: 5.0vw;
+}
+
+.jspsych-btn {
+  font-size: 2.0vw;
+  border: 0.2vw solid #333333;
+}
+
+:root {
+  /* Option */
+  --option-box-width: 20.0vw;
+  --option-box-height: 20.0vw;
+  --option-font-size: 4.0vw;
+  --option-left: 35.0vw;
+  --option-bottom: 50.0vh;
+  --option-transform: translateY(50%) translateX(-50%);
+  /* Key */
+  --key-left: 20.0vw;
+  --key-bottom: var(--option-bottom);
+  /* quiz */
+  --quiz-left: 50.0vw;
+  --quiz-bottom: 5.0vw;
+  /* Image */
+  --image-width: 70.0vw;
+  --image-height: calc(var(--image-width) * 9 / 16);
+  --image-left: 50.0vw;
+  --image-bottom: 32.0vw;
+  /* Timeout */
+  --timeout-bottom: 20.0vh;
+}
+
+/**************/
+/* Option box */
+/**************/
+
+.option-box {
+  width: var(--option-box-width);
+  height: var(--option-box-height);
+}
+
+.option-text {
+  font-size: var(--option-font-size);
+}
+
+#option-box-left {
+  position: absolute;
+  left: var(--option-left);
+  bottom: var(--option-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+#option-box-right {
+  position: absolute;
+  left: calc(100.0vw - var(--option-left));
+  bottom: var(--option-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+#option-text-left {
+  position: absolute;
+  left: var(--option-left);
+  bottom: var(--option-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+#option-text-right {
+  position: absolute;
+  left: calc(100.0vw - var(--option-left));
+  bottom: var(--option-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+.default {
+  border: 0.2vw solid white;
+}
+
+.chosen {
+  border: 0.6vw solid yellow;
+}
+
+.key {
+  width: var(--option-font-size);
+  height: var(--option-font-size);
+  font-size: var(--option-font-size);
+  line-height: var(--option-font-size); /* This parmeter must be the same as `height`*/
+  color: white;
+  border: 0.2vw solid white;
+  border-radius: 0.5vw;
+}
+
+#key-left {
+  position: absolute;
+  left: var(--key-left);
+  bottom: var(--key-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+#key-right {
+  position: absolute;
+  left: calc(100.0vw - var(--key-left));
+  bottom: var(--key-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+#timeout {
+  font-size: 1.5vw;
+  color: yellow;
+  position: absolute;
+  left: 50.0vw;
+  bottom: var(--timeout-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+.quiz {
+  position: absolute;
+  left: var(--quiz-left);
+  bottom: var(--quiz-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
+
+.image {
+  width: var(--image-width);
+  height: var(--image-height);
+  position: absolute;
+  left: var(--image-left);
+  bottom: var(--image-bottom);
+  transform: var(--option-transform);
+  -webkit-transform: var(--option-transform);
+}
